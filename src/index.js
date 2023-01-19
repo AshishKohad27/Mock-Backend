@@ -14,7 +14,7 @@ app.use(cors());
 app.use("/user", userRoute);
 
 app.get("/", async (req, res) => {
-    res.send("Welcome to our backend studentCode:fw20_1220");
+    res.send("Welcome to our backend studentCode:fw20_1220  Please use {/user} for reaching to DB");
 })
 
 app.listen(PORT, async () => {

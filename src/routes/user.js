@@ -6,7 +6,8 @@ const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 
 userRoute.get("/", async (req, res) => {
-    res.send("Hello in user Route of Backend");
+    let user = await userModel.find({});
+    res.send(user);
 });
 
 userRoute.post("/login", async (req, res) => {
